@@ -1,25 +1,25 @@
 class Tuipo < Formula
   desc "Grammarly-style spell-check for your terminal — underlines typos as you type in any TUI"
   homepage "https://github.com/ARahim3/tuipo"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.0/tuipo-aarch64-apple-darwin.tar.xz"
-      sha256 "855cb8f39efa6a083b42a6b89cfab28da732c8786f487e82e4dbab4ea9ddcdae"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.1/tuipo-aarch64-apple-darwin.tar.xz"
+      sha256 "04773ada68af780eaf5b0b9146c9bfb33755bd26bf40f1cc59ae3d80498c5e77"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.0/tuipo-x86_64-apple-darwin.tar.xz"
-      sha256 "aaa727c76292aad6fbcde5f95175b03d7e4a3382db622432ec8be14276a6e7e1"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.1/tuipo-x86_64-apple-darwin.tar.xz"
+      sha256 "7d49eca0e8e2cf5b615ace756613837da47f0f304ae907658840e0b8a1855ef1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.0/tuipo-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "144a0d01f1c69ea7767aaf75aeb2d97b4ad6dcfdfde56a7249c20811dec91baa"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.1/tuipo-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a8937cb5119b6ff7b41022b57ca8a2f255c6ffce66df20c342e3d227f6bf4e9b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.0/tuipo-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "75f332bcdae59c6f6302a595bc9d9042af89329efff0631255101533d6bee18c"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.1/tuipo-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4174f221d5e4f06df20c851990fb6c981d3068ea4a9bdaff33004bea2d36a3d0"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
