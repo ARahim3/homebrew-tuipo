@@ -1,25 +1,25 @@
 class Tuipo < Formula
   desc "Grammarly-style spell-check for your terminal — underlines typos as you type in any TUI"
   homepage "https://github.com/ARahim3/tuipo"
-  version "0.1.2"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.2/tuipo-aarch64-apple-darwin.tar.xz"
-      sha256 "5a636bc9c5c3711b14e1647e646a5ea47b91296fe13cd74f9c5bc0a2dc017566"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.2.0/tuipo-aarch64-apple-darwin.tar.xz"
+      sha256 "ed795ad8d7538e697397e8bcac5fac3852b6bb1fc8a4f5f9ebb9cf639e5af091"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.2/tuipo-x86_64-apple-darwin.tar.xz"
-      sha256 "9c5df7510f071e40f3df87ed0d842050dd62c3d7ad71a7ef4aa16e4836930583"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.2.0/tuipo-x86_64-apple-darwin.tar.xz"
+      sha256 "97871f1b4c4ed8efd109ee5eb39387f6c5cad750fb0e164f32b9601cb63acc51"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.2/tuipo-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "342eec4c7186f919d96851041d7b42fc5760e3e98e6b6c7998af50a6784abf0a"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.2.0/tuipo-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d4cca83a998ecce0360f40d7a95e368004ec98105775d190685145d10fd654f9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ARahim3/tuipo/releases/download/v0.1.2/tuipo-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4d12a3d1dd63f642a61d6d97bc99967d94daa4f720e344702809020eb1d09b3a"
+      url "https://github.com/ARahim3/tuipo/releases/download/v0.2.0/tuipo-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c36153cf0d5c6f06c9b398c621edd7de8332ad1d3c4359240d776cc6bd827a9e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,18 @@ class Tuipo < Formula
   end
 
   def install
-    bin.install "tuipo" if OS.mac? && Hardware::CPU.arm?
-    bin.install "tuipo" if OS.mac? && Hardware::CPU.intel?
-    bin.install "tuipo" if OS.linux? && Hardware::CPU.arm?
-    bin.install "tuipo" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "tuipo"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "tuipo"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "tuipo"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "tuipo"
+    end
 
     install_binary_aliases!
 
